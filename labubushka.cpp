@@ -6,22 +6,22 @@
 #include <iostream>
 #include <cmath>
 #include <iomanip>
-#include <locale>
+
 using namespace std;
 
 int main() {
-  setlocale(LC_ALL, "Russian");
 
-  double tR = 500.0;
-  double tB = 15.0;
-  double nu_cm2_s = 0.15;
-  double nu = nu_cm2_s * 0.0001;
-  double g = 9.81;
+  double tR; tB; nuCm2S; nu; g; d;
+  tR = 500.0
+  tB = 15.0;
+  nu_cm2_s = 0.15;
+  nu = nu_cm2_s * 0.0001;
+  g = 9.81;
+  d = 0.1
 
   cout << fixed << setprecision(1);
   cout << "m    Gr          Nu" << endl;
 
-  double d = 0.1;
   while (d <= 0.3) {
     double deltaT = tR - tB;
     double Gr = g * pow(d, 3.0) * deltaT / (nu * nu * (tB + 273.0));
