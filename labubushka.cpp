@@ -11,7 +11,7 @@ using namespace std;
 
 int main() {
 
-  double tR; tB; nuCm2S; nu; g; d;
+  double tR; tB; nuCm2S; nu; g; d; deltaT; Gr; Nu;
   tR = 500.0
   tB = 15.0;
   nu_cm2_s = 0.15;
@@ -23,10 +23,9 @@ int main() {
   cout << "m    Gr          Nu" << endl;
 
   while (d <= 0.3) {
-    double deltaT = tR - tB;
-    double Gr = g * pow(d, 3.0) * deltaT / (nu * nu * (tB + 273.0));
+    deltaT = tR - tB;
+    Gr = g * pow(d, 3.0) * deltaT / (nu * nu * (tB + 273.0));
 
-    double Nu;
     if (Gr < 1000000000) {
       Nu = 0.76 * pow(Gr, 0.22);
     } else {
