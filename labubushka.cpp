@@ -17,8 +17,9 @@ int main() {
   nuCm2S = 0.15;
   nu = nuCm2S * 0.0001;
   g = 9.81;
+  ed = 1.0
 
-  cout << fixed << setprecision(1);
+  cout << fixed << setprecision(ed);
   cout << "m    Gr          Nu" << endl;
 
   d = 0.1;
